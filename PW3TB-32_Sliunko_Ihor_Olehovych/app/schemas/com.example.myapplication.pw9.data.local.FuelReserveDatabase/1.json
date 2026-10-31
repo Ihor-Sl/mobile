@@ -1,0 +1,91 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "a96f1e9a74b15527e70be4534c8d27f6",
+    "entities": [
+      {
+        "tableName": "fuel_tanks",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `name` TEXT NOT NULL, `facility` TEXT NOT NULL, `capacity_l` REAL NOT NULL, `level_l` REAL NOT NULL, `rated_power_kw` REAL NOT NULL, `load_kw` REAL NOT NULL, `full_load_lph` REAL NOT NULL, `updated_at` INTEGER NOT NULL, `pending_sync` INTEGER NOT NULL, `deleted` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "facility",
+            "columnName": "facility",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "capacityL",
+            "columnName": "capacity_l",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "levelL",
+            "columnName": "level_l",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ratedPowerKw",
+            "columnName": "rated_power_kw",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "loadKw",
+            "columnName": "load_kw",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fullLoadLph",
+            "columnName": "full_load_lph",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAt",
+            "columnName": "updated_at",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pendingSync",
+            "columnName": "pending_sync",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "deleted",
+            "columnName": "deleted",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        }
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'a96f1e9a74b15527e70be4534c8d27f6')"
+    ]
+  }
+}
