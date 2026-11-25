@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ПЗ 19: підказка (tooltip), яку MPAndroidChart малює над вибраною точкою -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/marker_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/chart_marker_bg"
+    android:lineSpacingExtra="2dp"
+    android:paddingStart="10dp"
+    android:paddingTop="6dp"
+    android:paddingEnd="10dp"
+    android:paddingBottom="6dp"
+    android:textColor="#FFFFFF"
+    android:textSize="12sp" />
